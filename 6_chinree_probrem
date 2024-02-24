@@ -1,0 +1,49 @@
+'''
+
+Mr. Lou Kim is ordering some sweet n' sour pork for next month, but money is tight right now. Also, the population of South Park is
+expected to rise by 6% this month. He needs to order just the right amount. This process is compricated so we want to make it easier for him.
+
+I've created the logic below, but the functions don't work yet. Complete each function so it prints "City Wok needs 232 lbs. of sweet n' sour pork next month."
+We want our functions to be reusable, so do not code any hard numbers into them. We just want logic.
+
+Hints:
+* If you have to - review how function arguments and returns work
+* If things look strange, you may want to lookup what *args an **kwargs are
+* Don't over engineer your functions - we want them simple and reuable.
+
+'''
+
+def get_number_months(months):
+    # Should return 8
+
+def get_chicken_weight(weights):
+    # Should return 1476
+
+def large_enough_sample(sample, acceptable_count = 5):
+    # Should return True
+
+def average_samples(numerator, denominator):
+    # Should return 218.4444*
+
+def adjust_for_population(average, increase=1.06):
+    # Should return 231.55*
+
+def clean_result(number):
+    # Should return 232
+
+def get_message(result):
+    # Should return "City Wok needs 232 lbs. of sweet n' sour pork next month."
+    
+
+# Do not change anything below this line.
+if __name__ == "__main__":
+    months = get_number_months(['June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February'])
+    chicken_weight = get_chicken_weight([220, 422, 300, 280, 120, 180, 232, 212])
+    
+    if not large_enough_sample(months):
+        print('Sample is too small')
+    else:
+        average = average_samples(chicken_weight, months)
+        adjusted_average = adjust_for_population(average)
+        result = clean_result(adjusted_average)
+        print(get_message(result))
